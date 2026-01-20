@@ -1,3 +1,3 @@
-import Forms from "./Forms.vue";
+import Forms from "./Forms/Forms.vue";
 
 export default Forms;
