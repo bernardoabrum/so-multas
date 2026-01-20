@@ -3,6 +3,7 @@
     <p>Forms</p>
     <form @submit="submitForm">
       <input type="text" placeholder="Nome" v-model="name" required />
+      <input type="email" placeholder="Email" v-model="email" required />
       <MaskInput
         mask="(##) #####-####"
         pattern="\(\d{2}\)\s\d{5}-\d{4}"
@@ -10,7 +11,6 @@
         v-model="phone"
         required
       />
-      <input type="email" placeholder="Email" v-model="email" required />
       <button type="submit">Enviar</button>
     </form>
   </div>
@@ -20,17 +20,32 @@
 import { ref } from "vue";
 import "./Forms.scss";
 import { MaskInput } from "vue-3-mask";
+import { db } from "@/firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const name = ref("");
 const phone = ref("");
 const email = ref("");
 
-const submitForm = (event) => {
+const submitForm = async (event) => {
   event.preventDefault();
-  console.log("Formulário enviado:", {
-    name: name.value,
-    phone: phone.value,
+
+  const payload = {
+    nome: name.value,
     email: email.value,
-  });
+    telefone: phone.value,
+    data: serverTimestamp(),
+  };
+
+  try {
+    await addDoc(collection(db, "leads"), {
+      ...payload,
+    });
+  } catch (error) {
+    console.error("Erro ao enviar o formulário: ", error);
+    return;
+  }
+
+  alert("Enviado com sucesso!");
 };
 </script>

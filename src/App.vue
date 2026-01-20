@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <h1>App</h1>
     <Forms />
   </div>
@@ -7,5 +7,5 @@
 
 <script setup>
 import "./App.scss";
-import Forms from "@/components";
+import { Forms } from "@/components";
 </script>
