@@ -12,6 +12,11 @@
     "emulator": "concurrently \"npm run build\" \"firebase emulators:start --only hosting\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-regular-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/vue-fontawesome": "^3.1.3",
     "concurrently": "^9.2.1",
     "firebase": "^12.8.0",
     "sass": "^1.97.2",

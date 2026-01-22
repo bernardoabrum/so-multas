@@ -1,0 +1,26 @@
+.cmp-whatsapp {
+  a {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: #1ebe5d;
+      bottom: 44px;
+    }
+
+    svg {
+      font-size: 50px;
+      color: white;
+    }
+  }
+}

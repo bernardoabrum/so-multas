@@ -2,7 +2,7 @@
   <div class="cmp-forms">
     <div class="title">
       <p>Não perca tempo!</p>
-      <p>Envie suas informações e entraremos em <b>contato</b>.</p>
+      <p>Envie suas informações e entraremos em contato.</p>
     </div>
     <form @submit="submitForm">
       <Input type="text" placeholder="Nome" v-model="name" />
