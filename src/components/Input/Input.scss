@@ -1,0 +1,29 @@
+.cmp-input {
+  input {
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(163, 186, 198);
+    color: rgb(94, 108, 123);
+
+    &::placeholder {
+      color: #7e7e7e;
+    }
+
+    &.invalid {
+      border-color: red;
+    }
+  }
+
+  .message {
+    visibility: hidden;
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+
+    &.visible {
+      visibility: visible;
+    }
+  }
+}

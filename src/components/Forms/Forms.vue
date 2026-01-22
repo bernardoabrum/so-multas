@@ -1,27 +1,31 @@
 <template>
   <div class="cmp-forms">
-    <p>Forms</p>
+    <div class="title">
+      <p>Não perca tempo!</p>
+      <p>Fale agora mesmo com um <b>especialista.</b></p>
+    </div>
     <form @submit="submitForm">
-      <input type="text" placeholder="Nome" v-model="name" required />
-      <input type="email" placeholder="Email" v-model="email" required />
-      <MaskInput
-        mask="(##) #####-####"
-        pattern="\(\d{2}\)\s\d{5}-\d{4}"
+      <Input type="text" placeholder="Nome" v-model="name" />
+      <Input type="email" placeholder="Email" v-model="email" />
+      <Input
+        :maskedInput="true"
+        type="tel"
         placeholder="Telefone"
         v-model="phone"
-        required
+        mask="(##) #####-####"
+        pattern="\(\d{2}\)\s\d{5}-\d{4}"
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Falar com especialista</button>
     </form>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
 import "./Forms.scss";
-import { MaskInput } from "vue-3-mask";
+import { ref } from "vue";
 import { db } from "@/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { Input } from "@/components";
 
 const name = ref("");
 const phone = ref("");
@@ -44,6 +48,10 @@ const submitForm = async (event) => {
   } catch (error) {
     console.error("Erro ao enviar o formulário: ", error);
     return;
+  } finally {
+    name.value = "";
+    email.value = "";
+    telefone.value = "";
   }
 
   alert("Enviado com sucesso!");

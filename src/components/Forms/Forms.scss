@@ -1,8 +1,41 @@
 .cmp-forms {
+  padding: 25px;
+  border: 1px solid rgb(163, 186, 198);
+  background-color: rgb(240, 243, 245);
+  width: 350px;
+
+  .title {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 24px;
+      color: #242424;
+      font-weight: 400;
+    }
+
+    p:first-child {
+      color: rgb(0, 40, 136);
+    }
+  }
+
   form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    gap: 12px;
+    gap: 10px;
+
+    button {
+      font-size: 16px;
+      padding: 16px;
+      background-color: rgb(30, 207, 12);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.1s ease;
+      margin-top: 12px;
+
+      &:hover {
+        background-color: rgb(22, 172, 9);
+        color: white;
+      }
+    }
   }
 }

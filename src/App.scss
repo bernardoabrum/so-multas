@@ -1,9 +1,16 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  line-height: 1.15;
+  font-family: "Titillium Web", sans-serif;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  h1 {
-    color: red;
-  }
 }

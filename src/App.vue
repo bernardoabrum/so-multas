@@ -1,11 +1,10 @@
 <template>
   <div class="app">
-    <h1>App</h1>
-    <Forms />
+    <Main />
   </div>
 </template>
 
 <script setup>
 import "./App.scss";
-import { Forms } from "@/components";
+import { Main } from "@/views";
 </script>
