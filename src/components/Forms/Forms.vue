@@ -2,7 +2,7 @@
   <div class="cmp-forms">
     <div class="title">
       <p>Não perca tempo!</p>
-      <p>Fale agora mesmo com um <b>especialista.</b></p>
+      <p>Envie suas informações e entraremos em <b>contato</b>.</p>
     </div>
     <form @submit="submitForm">
       <Input type="text" placeholder="Nome" v-model="name" />
@@ -15,7 +15,7 @@
         mask="(##) #####-####"
         pattern="\(\d{2}\)\s\d{5}-\d{4}"
       />
-      <button type="submit">Falar com especialista</button>
+      <button type="submit">Enviar informações pra contato</button>
     </form>
   </div>
 </template>
@@ -51,7 +51,7 @@ const submitForm = async (event) => {
   } finally {
     name.value = "";
     email.value = "";
-    telefone.value = "";
+    phone.value = "";
   }
 
   alert("Enviado com sucesso!");
