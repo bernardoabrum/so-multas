@@ -19,12 +19,8 @@
       </div>
     </section>
     <div class="divisory">
-      <div class="text">
-        <p>Resolvemos qualquer problema relacionado a multas de trânsito</p>
-        <p>
-          A Só Multas é a maior especialista em proteção ao direito de dirigir
-          do Brasil.
-        </p>
+      <div class="container">
+        <img src="@/assets/logo.webp" alt="Logo Só Multas" />
       </div>
     </div>
     <section class="section second">
@@ -48,6 +44,35 @@
       </div>
       <div class="image">
         <img src="@/assets/section2.png" alt="#" />
+      </div>
+    </section>
+    <section class="section third">
+      <div class="text">
+        <p>Resolvemos qualquer problema relacionado a multas de trânsito</p>
+        <p>
+          A Só Multas é a maior especialista em proteção ao direito de dirigir
+          do Brasil.
+        </p>
+      </div>
+      <div class="fines">
+        <div class="container">
+          <div class="fine-container">
+            <p>Multas de Lei Seca</p>
+            <img src="@/assets/bafometro.png" alt="" />
+          </div>
+          <div class="fine-container">
+            <p>Multas por velocidade</p>
+            <img src="@/assets/semaforo.png" alt="" />
+          </div>
+          <div class="fine-container">
+            <p>Multas na Provisória</p>
+            <img src="@/assets/id.png" alt="" />
+          </div>
+          <div class="fine-container">
+            <p>Recursos Simples</p>
+            <img src="@/assets/pare.png" alt="" />
+          </div>
+        </div>
       </div>
     </section>
   </div>
