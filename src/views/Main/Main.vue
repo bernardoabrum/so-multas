@@ -46,35 +46,37 @@
         <img src="@/assets/section2.png" alt="#" />
       </div>
     </section>
-    <section class="section third">
-      <div class="text">
-        <p>Resolvemos qualquer problema relacionado a multas de trânsito</p>
-        <p>
-          A Só Multas é a maior especialista em proteção ao direito de dirigir
-          do Brasil.
-        </p>
-      </div>
-      <div class="fines">
-        <div class="container">
-          <div class="fine-container">
-            <p>Multas de Lei Seca</p>
-            <img src="@/assets/bafometro.png" alt="" />
-          </div>
-          <div class="fine-container">
-            <p>Multas por velocidade</p>
-            <img src="@/assets/semaforo.png" alt="" />
-          </div>
-          <div class="fine-container">
-            <p>Multas na Provisória</p>
-            <img src="@/assets/id.png" alt="" />
-          </div>
-          <div class="fine-container">
-            <p>Recursos Simples</p>
-            <img src="@/assets/pare.png" alt="" />
+    <div class="background-section">
+      <section class="section third">
+        <div class="text">
+          <p>Resolvemos qualquer problema relacionado a multas de trânsito</p>
+          <p>
+            A Só Multas é a maior especialista em proteção ao direito de dirigir
+            do Brasil.
+          </p>
+        </div>
+        <div class="fines">
+          <div class="container">
+            <div class="fine-container">
+              <p>Multas de Lei Seca</p>
+              <img src="@/assets/bafometro.png" alt="" />
+            </div>
+            <div class="fine-container">
+              <p>Multas por velocidade</p>
+              <img src="@/assets/semaforo.png" alt="" />
+            </div>
+            <div class="fine-container">
+              <p>Multas na Provisória</p>
+              <img src="@/assets/id.png" alt="" />
+            </div>
+            <div class="fine-container">
+              <p>Recursos Simples</p>
+              <img src="@/assets/pare.png" alt="" />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
