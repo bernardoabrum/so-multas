@@ -75,7 +75,7 @@
         </div>
       </div>
     </section>
-    <div class="background-section">
+    <div class="background">
       <section class="section fourth">
         <div class="video">
           <iframe
@@ -110,6 +110,32 @@
       <div class="text">
         <p>Nós podemos te ajudar a evitar todos esses problemas.</p>
         <p>Fale agora mesmo com um especialista em <b>LEI SECA.</b></p>
+      </div>
+    </section>
+    <section class="section sixth">
+      <div class="container-up">
+        <div class="content">
+          <p>
+            A <b>Só Multas</b> conta com unidades físicas em todo território
+            nacional.
+          </p>
+          <img src="@/assets/brasil.webp" alt="#" />
+        </div>
+      </div>
+      <div class="container-down">
+        <img src="@/assets/pc.webp" alt="#" />
+        <div class="contact">
+          <p>
+            Solicite agora uma avaliação do seu caso.
+            <b>Clique no botão abaixo para ser atendido no WhatsApp.</b>
+          </p>
+          <a
+            href="https://wa.me/+553298687371?text=Olá%20gostaria%20de%20falar%20com%20um%20especialista!"
+            target="_blank"
+            rel="noopener"
+            >Enviar mensagem no WhatsApp</a
+          >
+        </div>
       </div>
     </section>
   </div>
