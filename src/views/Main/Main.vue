@@ -138,6 +138,47 @@
         </div>
       </div>
     </section>
+    <div class="background">
+      <section class="section seventh">
+        <div class="container-up">
+          <div class="text">
+            <div>
+              <p>
+                A <b>Só Multas</b> cuida de cada caso individualmente, analisa
+                multa por multa e processo por processo, buscando
+                irregularidades para conseguir o
+                <b>cancelamento da infração</b>.
+              </p>
+              <p>
+                Já são mais de <b>50 mil clientes</b> atendidos em todo o
+                Brasil.
+              </p>
+            </div>
+            <img src="@/assets/logo.webp" alt="Logo Só Multas" />
+          </div>
+          <div class="carousel">
+            <h2>O que estão falando de nós?</h2>
+            <div class="container">
+              <div class="track" :style="trackStyle">
+                <div class="card" :key="card" v-for="card in cards">
+                  <p>{{ card.name }}</p>
+                  <p>{{ card.text }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button @click="switchCard('left')">
+                <FontAwesomeIcon :icon="faChevronLeft" />
+              </button>
+              <button @click="switchCard('right')">
+                <FontAwesomeIcon :icon="faChevronRight" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container-down"></div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -150,5 +191,45 @@ import {
   faComputer,
   faPiggyBank,
   faHouseLaptop,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { ref, computed } from "vue";
+
+const cards = [
+  {
+    name: "João",
+    src: "@/assets/id.png",
+    text: "Excelente serviço! Meu recurso foi aceito rapidamente.",
+  },
+  {
+    name: "José",
+    src: "@/assets/pare.png",
+    text: "Profissionais competentes e atendimento eficiente.",
+  },
+];
+
+const currentIndex = ref(0);
+const STEP = 280;
+
+const trackStyle = computed(() => ({
+  transform: `translateX(-${currentIndex.value * STEP}px)`,
+  transition: "transform 0.5s ease",
+}));
+
+function switchCard(direction) {
+  if (direction === "right") {
+    currentIndex.value++;
+  } else {
+    currentIndex.value--;
+  }
+
+  if (currentIndex.value < 0) {
+    currentIndex.value = 0;
+  }
+
+  if (currentIndex.value > cards.length - 1) {
+    currentIndex.value = cards.length - 1;
+  }
+}
 </script>
