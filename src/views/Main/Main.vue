@@ -154,7 +154,7 @@
                 Brasil.
               </p>
             </div>
-            <img src="@/assets/logo.webp" alt="Logo Só Multas" />
+            <img src="@/assets/logo2.png" alt="Logo Só Multas" />
           </div>
           <div class="carousel">
             <h2>O que estão falando de nós?</h2>
@@ -176,7 +176,23 @@
             </div>
           </div>
         </div>
-        <div class="container-down"></div>
+        <div class="container-down">
+          <h1>
+            Recorra da Multa da Lei Seca, evite a perda da sua CNH e mantenha
+            seu direito de dirigir!
+          </h1>
+          <p>
+            Nossos especialistas estão prontos para analisar seu caso e auxiliar
+            no melhor recurso.
+            <b>Clique no botão abaixo para ser atendido no WhatsApp</b>
+          </p>
+          <a
+            href="https://wa.me/+553298687371?text=Olá%20gostaria%20de%20falar%20com%20um%20especialista!"
+            target="_blank"
+            rel="noopener"
+            >Converse agora com um especialista</a
+          >
+        </div>
       </section>
     </div>
   </div>
@@ -198,14 +214,14 @@ import { ref, computed } from "vue";
 
 const cards = [
   {
-    name: "João",
-    src: "@/assets/id.png",
-    text: "Excelente serviço! Meu recurso foi aceito rapidamente.",
+    name: "Leonardo Carvalho",
+    // src: "@/assets/",
+    text: "Tomei uma multa de velocidade em mais de 50%, ia perder a CNH e a Só Multas me salvou",
   },
   {
-    name: "José",
-    src: "@/assets/pare.png",
-    text: "Profissionais competentes e atendimento eficiente.",
+    name: "Thiago Amorim",
+    // src: "@/assets/",
+    text: "Sempre que eu preciso, chamo a galera no WhatsApp, como não tenho tempo eles resolvem tudo por lá",
   },
 ];
 
