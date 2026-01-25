@@ -19,6 +19,7 @@
     &.first {
       display: flex;
       align-items: center;
+      margin-top: 50px;
 
       .text {
         color: #304672;
@@ -154,12 +155,13 @@
       gap: 60px;
 
       .video {
-        border-radius: 10px;
+        border-radius: 20px;
         min-width: fit-content;
         overflow: hidden;
 
         iframe {
           border: solid 12px rgb(163, 186, 198);
+          border-radius: 20px;
         }
       }
 
@@ -224,10 +226,6 @@
 
         p {
           font-size: 22px;
-
-          &:first-child {
-            font-weight: bold;
-          }
         }
       }
     }
