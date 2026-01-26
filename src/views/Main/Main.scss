@@ -5,6 +5,18 @@
   max-width: 100vw;
   width: 100%;
 
+  // temporary
+  .section {
+    &.second,
+    &.third,
+    &.fourth,
+    &.fifth,
+    &.sixth,
+    &.seventh {
+      display: none !important;
+    }
+  }
+
   .background {
     display: flex;
     justify-content: center;
@@ -16,10 +28,28 @@
     width: 1024px;
     padding: 0 20px;
 
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+      width: 100%;
+    }
+
     &.first {
       display: flex;
       align-items: center;
       margin-top: 50px;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        align-items: flex-end;
+      }
+
+      @media (max-width: 768px) {
+        align-items: center;
+        margin-top: 20px;
+        align-items: center;
+      }
 
       .text {
         color: #304672;
@@ -28,16 +58,52 @@
           font-size: 49px;
           font-weight: normal;
           margin-bottom: 30px;
+
+          @media (max-width: 768px) {
+            font-size: 32px;
+          }
         }
 
         h2 {
           font-size: 22px;
           font-weight: normal;
+
+          @media (max-width: 768px) {
+            font-size: 22px;
+          }
         }
       }
 
       .image {
         margin: 0 30px 0 0;
+
+        @media (max-width: 1024px) {
+          position: absolute;
+          margin: 0 0 -30px 50px;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+
+          img {
+            width: 230px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          // margin-left: 0;
+          left: inherit;
+          right: 0;
+        }
+      }
+
+      .forms {
+        @media (max-width: 1024px) {
+          margin-right: 40px;
+        }
+
+        @media (max-width: 768px) {
+          margin: 0;
+        }
       }
     }
 
@@ -279,6 +345,10 @@
         margin-top: -50px;
         padding: 0 20px;
 
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+
         .contact {
           display: flex;
           flex-direction: column;
@@ -300,6 +370,8 @@
             transition: 0.1s ease;
             text-decoration: none;
             color: #242424;
+            text-align: center;
+            width: fit-content;
 
             &:hover {
               background-color: rgb(22, 172, 9);
@@ -444,6 +516,8 @@
           transition: 0.1s ease;
           text-decoration: none;
           color: #242424;
+          text-align: center;
+          width: fit-content;
 
           &:hover {
             background-color: rgb(22, 172, 9);
@@ -464,13 +538,17 @@
     margin-top: -10px;
     width: 1400px;
 
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      margin-top: 20px;
+    }
+
     .container {
       width: 1024px;
       padding-left: 60px;
-    }
-
-    @media (max-width: 1400px) {
-      width: 100%;
     }
   }
 }

@@ -14,7 +14,7 @@
       <div class="image">
         <img src="@/assets/section1.png" alt="#" />
       </div>
-      <div class="form">
+      <div class="forms">
         <Forms />
       </div>
     </section>
