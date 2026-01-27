@@ -7,7 +7,6 @@
 
   // temporary
   .section {
-    &.fifth,
     &.sixth,
     &.seventh {
       display: none !important;
@@ -338,17 +337,31 @@
 
     &.fifth {
       display: flex;
-      align-items: center;
+      position: relative;
       color: #304672;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .punishments {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
+        margin: 40px 0;
+
+        @media (max-width: 768px) {
+          margin: 30px 0;
+          gap: 30px;
+        }
 
         h2 {
           font-weight: normal;
+
+          @media (max-width: 768px) {
+            font-size: 20px;
+          }
         }
 
         .box {
@@ -362,13 +375,32 @@
           p {
             font-size: 22px;
             text-align: center;
+
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
           }
         }
       }
 
       .image {
         margin-top: -50px;
-        margin-right: -60px;
+        margin-right: -50px;
+        align-self: flex-end;
+
+        @media (max-width: 1024px) {
+          margin-right: -75px;
+
+          img {
+            width: 300px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          display: none;
+          position: absolute;
+          bottom: 0;
+        }
       }
 
       .text {
@@ -376,9 +408,20 @@
         flex-direction: column;
         gap: 30px;
         margin-bottom: 200px;
+        margin-top: 40px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 60px;
+          margin-top: 20px;
+          gap: 20px;
+        }
 
         p {
           font-size: 22px;
+
+          @media (max-width: 768px) {
+            font-size: 19px;
+          }
         }
       }
     }
@@ -398,6 +441,7 @@
         background-color: rgb(240, 243, 245);
         border: 1px solid rgb(163, 186, 198);
         margin-top: -10px;
+        z-index: 2;
 
         @media (max-width: 1400px) {
           width: 100%;
