@@ -7,7 +7,6 @@
 
   // temporary
   .section {
-    &.second,
     &.third,
     &.fourth,
     &.fifth,
@@ -133,6 +132,10 @@
         gap: 30px;
         margin-left: -120px;
 
+        @media (max-width: 768px) {
+          margin-left: -20px;
+        }
+
         .advantages {
           display: flex;
           align-items: center;
@@ -142,6 +145,10 @@
             color: #242424;
             font-size: 18px;
             font-weight: bold;
+
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
           }
 
           svg {
@@ -151,6 +158,11 @@
             padding: 8px 8px 8px 300px;
             border-radius: 0 50px 50px 0;
             transition: 0.3s ease;
+
+            @media (max-width: 768px) {
+              font-size: 20px;
+              padding-left: 30px;
+            }
 
             &:hover {
               color: rgb(9, 100, 133);
@@ -162,6 +174,12 @@
       .image {
         margin-top: -40px;
         z-index: 2;
+
+        @media (max-width: 768px) {
+          img {
+            width: 200px;
+          }
+        }
       }
     }
 
