@@ -31,6 +31,11 @@
     @media (max-width: 1024px) {
       padding: 0 20px;
       width: 100%;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
     }
 
     &.first {
@@ -47,12 +52,18 @@
 
       @media (max-width: 768px) {
         align-items: center;
+        gap: 0;
         margin-top: 20px;
-        align-items: center;
       }
 
       .text {
         color: #304672;
+
+        @media (max-width: 768px) {
+          margin-bottom: -140px;
+          width: 190px;
+          align-self: flex-start;
+        }
 
         h1 {
           font-size: 49px;
@@ -60,7 +71,8 @@
           margin-bottom: 30px;
 
           @media (max-width: 768px) {
-            font-size: 32px;
+            font-size: 22px;
+            margin-bottom: 10px;
           }
         }
 
@@ -69,7 +81,7 @@
           font-weight: normal;
 
           @media (max-width: 768px) {
-            font-size: 22px;
+            font-size: 18px;
           }
         }
       }
@@ -90,9 +102,12 @@
         }
 
         @media (max-width: 768px) {
-          // margin-left: 0;
-          left: inherit;
-          right: 0;
+          position: relative;
+          margin-left: 150px;
+
+          img {
+            width: 150px;
+          }
         }
       }
 
