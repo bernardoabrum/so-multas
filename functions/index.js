@@ -36,9 +36,28 @@ exports.onCreateLead = onDocumentCreated(
           .toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })
       : "";
 
-    await sheets.spreadsheets.values.append({
+    await sheets.spreadsheets.batchUpdate({
       spreadsheetId: "1cUMtm8JcetvytsrZjVlDZMLl1TBZR4kxs8HYKDFbGQs",
-      range: "A:E",
+      requestBody: {
+        requests: [
+          {
+            insertDimension: {
+              range: {
+                sheetId: 0,
+                dimension: "ROWS",
+                startIndex: 1,
+                endIndex: 2,
+              },
+              inheritFromBefore: false,
+            },
+          },
+        ],
+      },
+    });
+
+    await sheets.spreadsheets.values.update({
+      spreadsheetId: "1cUMtm8JcetvytsrZjVlDZMLl1TBZR4kxs8HYKDFbGQs",
+      range: "A2:E2",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
