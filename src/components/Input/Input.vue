@@ -16,6 +16,7 @@
     />
     <MaskInput
       v-else
+      :key="maskKey"
       :class="{ invalid: invalidInput }"
       :type="type"
       :placeholder="placeholder"
@@ -37,12 +38,13 @@
 
 <script setup>
 import "./Input.scss";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { MaskInput } from "vue-3-mask";
 
 const invalidInput = ref(false);
+const maskKey = ref(0);
 
-defineProps({
+const props = defineProps({
   maskedInput: {
     type: Boolean,
     default: false,
@@ -66,6 +68,15 @@ defineProps({
     type: String,
   },
 });
+
+watch(
+  () => props.modelValue,
+  (value) => {
+    if (value === "") {
+      maskKey.value++;
+    }
+  },
+);
 
 defineEmits(["update:modelValue"]);
 
