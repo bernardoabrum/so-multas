@@ -542,7 +542,7 @@
           }
 
           a {
-            font-size: 18px;
+            font-size: 16px;
             padding: 16px;
             background-color: rgb(30, 207, 12);
             border-radius: 4px;
@@ -552,10 +552,6 @@
             color: #242424;
             text-align: center;
             width: fit-content;
-
-            @media (max-width: 768px) {
-              font-size: 16px;
-            }
 
             &:hover {
               background-color: rgb(22, 172, 9);
@@ -728,7 +724,7 @@
         }
 
         a {
-          font-size: 18px;
+          font-size: 16px;
           padding: 16px;
           background-color: rgb(30, 207, 12);
           border-radius: 4px;
@@ -738,10 +734,6 @@
           color: #242424;
           text-align: center;
           width: fit-content;
-
-          @media (max-width: 768px) {
-            font-size: 16px;
-          }
 
           &:hover {
             background-color: rgb(22, 172, 9);

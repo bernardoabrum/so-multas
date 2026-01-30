@@ -15,7 +15,12 @@
         mask="(##) #####-####"
         pattern="\(\d{2}\)\s\d{5}-\d{4}"
       />
-      <button type="submit">Enviar informações pra contato</button>
+      <button type="submit">
+        <span v-if="!isLoading">Enviar informações pra contato</span>
+        <span v-else>
+          <FontAwesomeIcon :icon="faCircleNotch" spin />
+        </span>
+      </button>
     </form>
   </div>
 </template>
@@ -26,10 +31,16 @@ import { ref } from "vue";
 import { db } from "@/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { Input } from "@/components";
+import { useRouter } from "vue-router";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+
+const router = useRouter();
 
 const name = ref("");
 const phone = ref("");
 const email = ref("");
+const isLoading = ref(false);
 
 const submitForm = async (event) => {
   event.preventDefault();
@@ -45,6 +56,7 @@ const submitForm = async (event) => {
     await addDoc(collection(db, "leads"), {
       ...payload,
     });
+    isLoading.value = true;
   } catch (error) {
     console.error("Erro ao enviar o formulário: ", error);
     return;
@@ -52,8 +64,10 @@ const submitForm = async (event) => {
     name.value = "";
     email.value = "";
     phone.value = "";
-  }
 
-  alert("Enviado com sucesso!");
+    setTimeout(() => {
+      router.push("/obrigado");
+    }, 1000);
+  }
 };
 </script>

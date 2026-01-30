@@ -195,12 +195,13 @@
         </div>
       </section>
     </div>
+    <Whatsapp />
   </div>
 </template>
 
 <script setup>
 import "./Main.scss";
-import { Forms } from "@/components";
+import { Forms, Whatsapp } from "@/components";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faClock,
@@ -215,12 +216,10 @@ import { ref, computed } from "vue";
 const cards = [
   {
     name: "Leonardo Carvalho",
-    // src: "@/assets/",
     text: "Tomei uma multa de velocidade em mais de 50%, ia perder a CNH e a Só Multas me salvou",
   },
   {
     name: "Thiago Amorim",
-    // src: "@/assets/",
     text: "Sempre que eu preciso, chamo a galera no WhatsApp, como não tenho tempo eles resolvem tudo por lá",
   },
 ];
@@ -233,7 +232,7 @@ const trackStyle = computed(() => ({
   transition: "transform 0.5s ease",
 }));
 
-function switchCard(direction) {
+const switchCard = (direction) => {
   if (direction === "right") {
     currentIndex.value++;
   } else {
@@ -247,5 +246,5 @@ function switchCard(direction) {
   if (currentIndex.value > cards.length - 1) {
     currentIndex.value = cards.length - 1;
   }
-}
+};
 </script>
