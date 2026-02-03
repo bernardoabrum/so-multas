@@ -5,10 +5,6 @@ import { Main, Sucessful } from "@/views";
 const routes = [
   {
     path: "/",
-    redirect: "/formulario",
-  },
-  {
-    path: "/formulario",
     name: "Main",
     component: Main,
   },
