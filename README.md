@@ -1,5 +1,5 @@
-# Vue 3 + Vite
+# Só Multas
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Landing page para captação de leads, integrado com Cloud Functions para enviar os leads para um planilha ordenada, possui integração com Firestore para backup de segurança dos dados.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Pode ser acessado em: [www.somultasbrasil.com.br](www.somultasbrasil.com.br)
